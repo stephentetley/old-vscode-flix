@@ -1,0 +1,25 @@
+{
+    "name": "vscode-flix",
+    "displayName": "vscode-flix",
+    "description": "Syntax highlighting for the Flix programming language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.39.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "flix",
+            "aliases": ["flix", "flix"],
+            "extensions": [".flix"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "flix",
+            "scopeName": "source.flix",
+            "path": "./syntaxes/flix.tmLanguage.json"
+        }]
+    }
+}

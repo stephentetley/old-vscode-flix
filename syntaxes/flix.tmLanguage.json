@@ -1,0 +1,86 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "flix",
+    "scopeName": "source.flix",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#constants"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.flix",
+                    "match": "\\b(match|with|case|if|else|select|spawn)\\b"
+                },
+                {
+                    "name": "keyword.typedecl.flix",
+                    "match": "\\b(enum|lat|rel)\\b"
+                },
+                {
+                    "name": "keyword.type.builtin.flix",
+                    "match": "\\b(Unit|Bool|Char|Float32|Float64|Int|Int8|Int16|Int32|Int64|Str|BigInt)\\b"
+                },
+                {
+                    "name": "keyword.decl.flix",
+                    "match": "\\b(def|let|pub)\\b"
+                },
+                {
+                    "name": "keyword.symbols.flix",
+                    "match": "(->|=>|<-)"
+                },
+                {
+                    "name": "keyword.operators.flix",
+                    "match": "(==|\\|>|\\+|\\-|\\*)"
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.flix",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.flix",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+            
+        },
+        "strings": {
+            "name": "string.quoted.double.flix",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.flix",
+                    "match": "\\\\."
+                }
+            ]
+        }, 
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.unit.flix",
+                    "match": "\\b\\(\\)\\b"
+                },
+                {
+                    "name": "constant.others.flix",
+                    "match": "\\b(true|false)\\b"
+                }
+            ]
+        }
+    }
+}
