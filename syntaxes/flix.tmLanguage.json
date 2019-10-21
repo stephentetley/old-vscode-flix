@@ -7,6 +7,9 @@
             "include": "#keywords"
         },
         {
+            "include": "#annotations"
+        },
+        {
             "include": "#comments"
         },
         {
@@ -19,6 +22,10 @@
     "repository": {
         "keywords": {
             "patterns": [
+                {
+                    "name": "keyword.scoping.flix",
+                    "match": "\\b(namespace|pub)\\b"
+                },
                 {
                     "name": "keyword.control.flix",
                     "match": "\\b(match|with|case|if|else|select|spawn)\\b"
@@ -33,16 +40,36 @@
                 },
                 {
                     "name": "keyword.decl.flix",
-                    "match": "\\b(def|let|pub)\\b"
+                    "match": "\\b(def|let)\\b"
+                },
+                {
+                    "name": "keyword.logical.flix",
+                    "match": "\\b(law)\\b"
+                },
+                {
+                    "name": "keyword.interop.flix",
+                    "match": "\\b(native|method|as)\\b"
                 },
                 {
                     "name": "keyword.symbols.flix",
-                    "match": "(->|=>|<-)"
+                    "match": "(\\->|=>|<\\-)"
                 },
                 {
                     "name": "keyword.operators.flix",
-                    "match": "(==|\\|>|\\+|\\-|\\*)"
+                    "match": "(==|\\|>|\\+|\\-|\\*|>>|<<|::)"
                 }
+            ]
+        },
+        "annotations": {
+            "patterns": [
+                {
+                    "name": "annotation.test.flix",
+                    "match": "\\b(@test)\\b"
+                },
+                {
+                    "name": "annotation.benchmark.flix",
+                    "match": "\\b(@benchmark)\\b"
+                }         
             ]
         },
         "comments": {
@@ -77,7 +104,7 @@
                     "match": "\\b\\(\\)\\b"
                 },
                 {
-                    "name": "constant.others.flix",
+                    "name": "constant.bool.flix",
                     "match": "\\b(true|false)\\b"
                 }
             ]
