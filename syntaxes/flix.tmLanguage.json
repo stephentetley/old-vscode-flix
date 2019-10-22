@@ -23,33 +23,54 @@
         "keywords": {
             "patterns": [
                 {
-                    "name": "keyword.scoping.flix",
-                    "match": "\\b(namespace|pub)\\b"
+                    "name": "keyword.declaration.flix",
+                    "match": "\\b(namespace|def|handler|law|enum|case|type|rel|lat|let|class|impl|disallow)\\b"
                 },
                 {
-                    "name": "keyword.control.flix",
-                    "match": "\\b(match|with|case|if|else|select|spawn)\\b"
+                    "name": "keyword.expression.native.flix",
+                    "match": "\\b(new|field|method|native)\\b"
                 },
                 {
-                    "name": "keyword.typedecl.flix",
-                    "match": "\\b(enum|lat|rel)\\b"
+                    "name": "keyword.expression.channel.flix",
+                    "match": "\\b(chan|select)\\b"
+                },
+                {
+                    "name": "keyword.expression.process.flix",
+                    "match": "\\b(spawn|sleep|panic)\\b"
+                },
+                {
+                    "name": "keyword.expression.fixpoint.flix",
+                    "match": "\\b(solve|project)\\b"
+                },                
+                {
+                    "name": "keyword.expression.handler.flix",
+                    "match": "\\b(eff|do)\\b"
+                }, 
+                {
+                    "name": "keyword.expression.let.flix",
+                    "match": "\\b(letrec|let\\*|let)\\b"
+                },
+                {
+                    "name": "keyword.expression.match.flix",
+                    "match": "\\b(case|if)\\b"
+                },
+                {
+                    "name": "keyword.expression.switch.flix",
+                    "match": "\\b(switch)\\b"
+                },
+                {
+                    "name": "keyword.expression.try.flix",
+                    "match": "\\b(try|catch)\\b"
+                },
+                {
+                    "name": "keyword.modifier.flix",
+                    "match": "\\b(pub|line)\\b"
                 },
                 {
                     "name": "keyword.type.builtin.flix",
                     "match": "\\b(Unit|Bool|Char|Float32|Float64|Int|Int8|Int16|Int32|Int64|Str|BigInt)\\b"
                 },
-                {
-                    "name": "keyword.decl.flix",
-                    "match": "\\b(def|let)\\b"
-                },
-                {
-                    "name": "keyword.logical.flix",
-                    "match": "\\b(law)\\b"
-                },
-                {
-                    "name": "keyword.interop.flix",
-                    "match": "\\b(native|method|as)\\b"
-                },
+                
                 {
                     "name": "keyword.symbols.flix",
                     "match": "(\\->|=>|<\\-)"
