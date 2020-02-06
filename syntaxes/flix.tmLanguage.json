@@ -31,7 +31,7 @@
                 },
                 {
                     "name": "keyword.expression.native.flix",
-                    "match": "\\b(new|field|method|native)\\b"
+                    "match": "\\b(import|new|get|set|as)\\b"
                 },
                 {
                     "name": "keyword.expression.channel.flix",
@@ -71,7 +71,7 @@
                 },
                 {
                     "name": "keyword.type.builtin.flix",
-                    "match": "\\b(Unit|Bool|Char|Float32|Float64|Int|Int8|Int16|Int32|Int64|Str|BigInt)\\b"
+                    "match": "\\b(Unit|Bool|Char|Float32|Float64|Int|Int8|Int16|Int32|Int64|String|BigInt|Option|Array|List|Result)\\b"
                 },
                 
                 {
